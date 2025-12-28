@@ -20,8 +20,8 @@ public class Binomial {
 	 }
 	
 	// Computes the Binomial function, efficiently
-	public static int binomial(int n, int k) {
-		int[][] new_arr = new int[n+1][k+1];
+	public static long binomial(int n, int k) {
+		long[][] new_arr = new long[n+1][k+1];
 		for (int i =0; i<new_arr.length;i++){
 			for (int j=0; j<new_arr[i].length; j++){
 				new_arr[i][j]= -1;
@@ -35,7 +35,7 @@ public class Binomial {
 		//// Replace the following statement with your code.
 	}
 
-	private static int binomial(int n, int k, int[][] memo) {
+	private static long binomial(int n, int k, long[][] memo) {
 		if (memo[n][k] != -1) {
 			return memo[n][k];
 		}
